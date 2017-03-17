@@ -1,0 +1,27 @@
+[data]
+    # the excel path
+    address = 'C:\Users\luoch\Desktop\test'
+
+[logging]
+    # boolean type, if true ,the debug information will print sys.stdout.
+    # if false, the debug information will print to file we specified.
+    debug = false
+    # the derectory in which our log file reside.
+    logfile = "logs/data_storage.log"
+    # backup log_fie maximum number is 5.
+    backup_count = 5
+    # A log files maximum size.if size exceed this, bakcup it.
+    max_size = 10000
+    # format your debug information.
+    # for more infomation, please checkout this site:
+    #       http://logbook.readthedocs.io/en/stable/
+    format_string = '({record.time:%Y-%m-%d %H:%M:%S.%f%z}),{record.level_name},[{record.thread_name}],{record.channel},{record.func_name}[{record.lineno}]: {record.message}'
+
+[database]
+# support mysql、oracle、postgresql
+    database = 'postgresql'
+    host = 'localhost'
+    port = 5432
+    db = 'example'
+    user = 'postgres'
+    password = 'system'
